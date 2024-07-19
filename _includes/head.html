@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=" initial-scale=1.0">
+    <title>Lily Rabble</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              yeseva: ['yeseva'],
+            },
+          }
+        }
+      }
+    </script>
+
+    <style>
+      @font-face {
+        font-family: 'yeseva';
+        src: url('/fonts/YesevaOne-Regular.otf') format('opentype');
+        font-weight: bold;
+        font-style: normal;
+      }
+    </style>
+  </head>
+
+  <body class="flex flex-col justify-start w-full min-h-screen">
