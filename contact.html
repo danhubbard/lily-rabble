@@ -1,45 +1,32 @@
 ---
 ---
+{% include head.html %}
 
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content=" initial-scale=1.0">
-    <title>Lily Rabble</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              //dincon: ['dincon'],
-            },
-          }
-        }
-      }
-    </script>
+{% include nav.html %}
 
-    <style>
-      /*@font-face {
-        font-family: 'dincon';
-        src: url('fonts/D-DINCondensed-Bold.otf') format('opentype');
-        font-weight: bold;
-        font-style: normal;
-      }*/
-    </style>
-  </head>
+<div class="max-w-screen-lg w-full mx-auto mt-12 sm:mt-24">
+  <h1 class="font-yeseva text-6xl ml-5 sm:ml-0 mb-12">Contact</h1>
 
-    <body class="w-full">
-      
-      {% include nav.html %}
-
-      <div class="flex flex-col sm:flex-row sm:max-w-screen-xl w-full mx-auto mt-12">
-        <form action="https://formsubmit.co/dan@parachute.io" method="POST">
-          <input class="border-2" type="text" name="name" required>
-          <input class="border-2" type="email" name="email" required>
-          <input class="border-2" type="textarea" name="message" required>
-          <button type="submit">Send</button>
-        </form>
+  <div class="sm:max-w-screen-xl w-full px-5 sm:px-0 mx-auto mt-12">
+    <form action="https://formsubmit.co/dan@parachute.io" method="POST">
+      <div class="w-full sm:w-3/5 mb-8">
+        <label class="font-yeseva">Name</label>
+        <input class="mt-0 block w-full px-2 py-2 border-0 border-2 border-gray-200 focus:ring-0 focus:border-blue-900" type="text" name="name" required>  
       </div>
-    </body>
+
+      <div class="w-full sm:w-3/5 mb-8">
+        <label class="font-yeseva">Email</label>
+        <input class="mt-0 block w-full px-2 py-2 border-0 border-2 border-gray-200 focus:ring-0 focus:border-blue-900" type="text" name="email" required>  
+      </div>
+
+      <div class="w-full sm:w-3/5 mb-8">
+        <label class="font-yeseva">Message</label>
+        <textarea class="mt-0 block w-full px-2 py-2 border-0 border-2 border-gray-200 focus:ring-0 focus:border-blue-900" type="textarea" name="message" rows="10" required></textarea>
+      </div>
+      <button class="w-40 block px-2 py-4 mt-5 bg-black text-white font-medium" type="submit">Send</button>
+    </form>
+  </div>
+
+</div>
+
+{% include footer.html %}
